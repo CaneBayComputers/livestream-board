@@ -1,0 +1,15 @@
+<div id="timer-<%= it.Widget.id %>" style="color: blue; font-size: 50px;"></div>
+
+<script>
+var zeroPad = (num) => String(num).padStart(2, '0');
+var $timer = $('#timer-<%= it.Widget.id %>');
+var seconds = <%= it.Widget.variables.seconds %>;
+setInterval(function() {
+	var display_seconds = --seconds;
+	var hours = Math.floor(display_seconds / 360);
+	display_seconds -= hours * 360;
+	var mins = Math.floor(display_seconds / 60);
+	display_seconds -= mins *60;
+	$timer.html(zeroPad(hours) + ':' + zeroPad(mins) + ':' + zeroPad(display_seconds));
+}, 1000)
+</script>

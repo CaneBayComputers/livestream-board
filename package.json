@@ -1,0 +1,30 @@
+{
+  "name": "livestream-board",
+  "version": "1.0.0",
+  "description": "Queue and pre-plan graphics, widgets and other media during a livestream.",
+  "main": "index.js",
+  "dependencies": {
+    "eta": "^1.12.3",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2",
+    "vue": "^3.2.31"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-screen-js": "browserify src/js/screen.js -o dist/js/screen.min.js",
+    "build-board-js": "browserify src/js/board.js -o dist/js/board.min.js",
+    "build-js": "npm run build-screen-js && npm run build-board-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaneBayComputers/livestream-board.git"
+  },
+  "author": "Shawn Welch",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/CaneBayComputers/livestream-board/issues"
+  },
+  "homepage": "https://github.com/CaneBayComputers/livestream-board#readme"
+}
